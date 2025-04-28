@@ -64,6 +64,10 @@
                                 <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                                 <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
                                 <li class="nav-item"><a class="nav-link" href="faq.html">Faq</a></li>
+                                <ul class="d-flex gap-3 align-items-center auth-buttons">
+                                    <li> <button id="submitButton" class="auth-sign-up-btn">Sign up</button></li>
+                                    <li> <button id="submitButtonTwo" class="auth-sign-in-btn">Sign In</button></li>
+                                </ul>
                             </ul>
                         </div>
                     </div>
@@ -740,6 +744,14 @@
     <script src="include/js/gsap.min.js"></script>
     <!--  Write you Js here -->
     <script src="include/js/custom.js"></script>
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function () {
+            window.location.href = "sign-up.html";  // Navigate to the "Next" screen
+        });
+        document.getElementById("submitButtonTwo").addEventListener("click", function () {
+            window.location.href = "sign-in.html";  // Navigate to the "Next" screen
+        });
+    </script>
 
     <!-- ============================ script-end ============================ -->
 

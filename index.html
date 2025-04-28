@@ -76,6 +76,10 @@
                                 <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                                 <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
                                 <li class="nav-item"><a class="nav-link" href="faq.html">Faq</a></li>
+                                <ul class="d-flex gap-3 align-items-center auth-buttons">
+                                    <li> <button id="submitButton" class="auth-sign-up-btn">Sign up</button></li>
+                                    <li> <button id="submitButtonTwo" class="auth-sign-in-btn">Sign In</button></li>
+                                </ul>
                             </ul>
                         </div>
                     </div>
@@ -126,7 +130,8 @@
                                                             alt="hero image">
                                                         <div class="hero-slide-video">
                                                             <video controls playsinline>
-                                                                <source src="include/videos/HomeScreenVideos/sybo-video.mp4"
+                                                                <source
+                                                                    src="include/videos/HomeScreenVideos/sybo-video.mp4"
                                                                     type="video/mp4" />
                                                             </video>
                                                         </div>
@@ -187,7 +192,7 @@
             <div class="container-fluid " style="background-color: #F5F7FA;margin-bottom: 150px;">
                 <div className='banner-content-container p-0'>
 
-                    <div class="u-photo-section-container container bg-transparent">
+                    <div class="py-5 container bg-transparent">
                         <div class="lets-go-container text-center">
                             <h1 style="font-size: 36px; letter-spacing: -0.02em;">Why People Love SYBO.ai</h1>
                         </div>
@@ -387,6 +392,14 @@
     <script src="include/js/gsap.min.js"></script>
     <!--  Write you Js here -->
     <script src="include/js/custom.js"></script>
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function () {
+            window.location.href = "sign-up.html";  // Navigate to the "Next" screen
+        });
+        document.getElementById("submitButtonTwo").addEventListener("click", function () {
+            window.location.href = "sign-in.html";  // Navigate to the "Next" screen
+        });
+    </script>
 
     <!-- ============================ script-end ============================ -->
 
