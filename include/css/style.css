@@ -265,7 +265,9 @@ textarea.form-control,.form-floating textarea.form-control{height:180px;resize:n
   .inner-hero-container{padding: 120px 0 60px;}
   .inner-hero-text h1{font-size: 3rem;}
   .hero-slide-video {border-radius: 24px;}
-  .auth-buttons{margin-top: 24px !important; }
+  .auth-buttons{margin-top: 24px !important; flex-direction: column; }
+  .auth-buttons li{width: 100%;}
+  .auth-buttons li button{width: 100%;}
 
 }
 
