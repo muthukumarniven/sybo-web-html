@@ -47,11 +47,6 @@
             <div class="container">
                 <div class="nav-inside d-flex align-items-center justify-content-between">
                     <a class="navbar-brand" href="index.html"><img src="include/images/logo.png" alt=""></a>
-                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                 </div>
             </div>
         </nav>
@@ -75,6 +70,11 @@
                                     <p class="spam-folder-inform-text">
                                         If the code is not available, please check the spam folder.
                                     </p>
+                                </div>
+
+                                <div class="verify-time-content d-flex align-items-center justify-content-center mt-3">
+                                    <p id="timer">01:57</p>
+
                                 </div>
 
                                 <div class="otp-inputs mt-4 mb-4">
@@ -142,7 +142,7 @@
             }
         };
 
-        document.getElementById("submitButton").addEventListener("click", function() {
+        document.getElementById("submitButton").addEventListener("click", function () {
             window.location.href = "index.html";  // Navigate to the "Next" screen
         });
 
@@ -161,6 +161,24 @@
                 inputs[index - 1].focus();
             }
         }
+
+
+
+        let timeInSeconds = 117;
+        function updateTimer() {
+            const minutes = Math.floor(timeInSeconds / 60);
+            const seconds = timeInSeconds % 60;
+            const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+            document.getElementById("timer").textContent = formattedTime;
+            if (timeInSeconds > 0) {
+                timeInSeconds--;
+            } else {
+                clearInterval(timerInterval);
+            }
+        }
+
+        const timerInterval = setInterval(updateTimer, 1000);
 
     </script>
 
